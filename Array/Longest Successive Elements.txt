@@ -1,0 +1,24 @@
+ Longest Successive Elements (Cose Studio)
+
+#include<iostream>
+#include<vector>
+#include<algorithm>
+#include<climits>
+
+int longestSuccessiveElements(vector<int>&a) {
+    // Write your code here.
+    int n=a.size();int c=0;
+    sort(a.begin(),a.end());
+    if(n<=1){
+        return n;
+    }
+    int max=a[0];
+    for (int i = 1; i < n; i++) {
+       if(a[i]-max==1){
+           c++;
+           max=a[i];
+       }
+       ans=max()
+    }
+    return c+1;
+}

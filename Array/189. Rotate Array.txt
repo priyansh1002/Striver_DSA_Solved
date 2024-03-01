@@ -1,0 +1,25 @@
+189. Rotate Array (Leetcode)
+
+class Solution {
+public:
+    void rotate(vector<int>& nums, int k) {
+
+        //O(1) Time complexity
+         int n= nums.size();
+         k=k%n;
+         reverse(nums.begin(),nums.begin()+(n-k));
+         reverse(nums.begin()+(n-k),nums.end());
+         reverse(nums.begin(),nums.end());
+
+
+        //O(n^2) time complexity
+        // int n = nums.size();
+        // for (int i = 0; i < k; i++) {
+        //     for (int j = n - 1; j > 0; j--) {                 
+        //         nums.insert(nums.begin(), nums[j]);
+        //         nums.pop_back();
+        //         break;
+        //     }
+        // }
+    }
+};

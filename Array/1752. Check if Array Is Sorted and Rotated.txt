@@ -1,0 +1,21 @@
+1752. Check if Array Is Sorted and Rotated (Leetcode)
+
+class Solution {
+public:
+    bool check(vector<int>& nums) {
+       int n=nums.size();vector<int> arr;
+        for(int i=0;i<n;i++){
+           arr.push_back(nums[i]);;
+       }
+       sort(arr.begin(),arr.end());
+       for(int i=0;i<n-1;i++){
+           if(nums[i]>nums[i+1]){
+               rotate(nums.begin(),nums.begin()+(i+1),nums.end());
+           }
+       } 
+       if(arr==nums)
+           return true;
+           else
+           return false;
+    }
+};
